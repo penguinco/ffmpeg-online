@@ -194,7 +194,17 @@ const App = () => {
         </p>
         <p className="ant-upload-text">Click or drag file</p>
       </Dragger>
-      <h4>2. Set ffmpeg options</h4>
+      <br />
+      <Button type="primary" disabled={!Boolean(file)} onClick={handleExec}>
+        変換する
+      </Button>
+      <br />
+      {href && (
+        <a href={href} download={downloadFileName}>
+          download file
+        </a>
+      )}
+      <h4>ffmpeg options</h4>
       <div className="exec">
         ffmpeg
         <Input
@@ -221,17 +231,6 @@ const App = () => {
           ffmpeg {inputOptions} {name} {outputOptions} {output}
         </div>
       </div>
-      <h4>3. Run and get the output file</h4>
-      <Button type="primary" disabled={!Boolean(file)} onClick={handleExec}>
-        run
-      </Button>
-      <br />
-      <br />
-      {href && (
-        <a href={href} download={downloadFileName}>
-          download file
-        </a>
-      )}
     </div>
   );
 };
