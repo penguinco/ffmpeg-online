@@ -174,7 +174,7 @@ const App = () => {
         </Spin>
       )}
 
-      <h2 align="center">ffmpeg-online</h2>
+      <h2 align="center">動画をmp3に変換</h2>
 
       <h4>1. ファイルを選択してください</h4>
       <p style={{ color: "gray" }}>
@@ -199,14 +199,14 @@ const App = () => {
         変換する
       </Button>
       <br />
+      <br />
       {href && (
         <a href={href} download={downloadFileName}>
-          download file
+          ファイルをダウンロードする
         </a>
       )}
       <h4>ffmpeg options</h4>
       <div className="exec">
-        ffmpeg
         <Input
           value={inputOptions}
           placeholder="please enter input options"
