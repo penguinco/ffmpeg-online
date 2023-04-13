@@ -232,30 +232,6 @@ const App = () => {
           download file
         </a>
       )}
-      <h4>4. Get other file from file system (use , split)</h4>
-      <p style={{ color: "gray" }}>
-        In some scenarios, the output file contains multiple files. At this
-        time, multiple file names can be separated by commas and typed into the
-        input box below.
-      </p>
-      <Input
-        value={files}
-        placeholder="Please enter the download file name"
-        onChange={(event) => setFiles(event.target.value)}
-      />
-      <Button type="primary" disabled={!Boolean(file)} onClick={handleGetFiles}>
-        confirm
-      </Button>
-      <br />
-      <br />
-      {outputFiles.map((outputFile, index) => (
-        <div key={index}>
-          <a href={outputFile.href} download={outputFile.name}>
-            {outputFile.name}
-          </a>
-          <br />
-        </div>
-      ))}
     </div>
   );
 };
