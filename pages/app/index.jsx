@@ -199,10 +199,9 @@ const App = () => {
         変換する
       </Button>
       <br />
-      <br />
       {href && (
         <a href={href} download={downloadFileName}>
-          ファイルをダウンロードする
+          download file
         </a>
       )}
       <h4>ffmpeg options</h4>
